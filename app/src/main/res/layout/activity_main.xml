@@ -1,0 +1,108 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" /> <!-- Improved contrast -->
+
+    <!-- EditText for Input Amount -->
+    <EditText
+        android:id="@+id/costOfServiceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/cost_of_service"
+        android:inputType="numberDecimal"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
+        android:autofillHints="credit-card-number"
+        android:maxWidth="488dp"/> <!-- Set max width -->
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service_question"
+        android:layout_marginTop="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/tipOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/amazingOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amazing_service" />
+
+        <RadioButton
+            android:id="@+id/goodOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/good_service" />
+
+        <RadioButton
+            android:id="@+id/okOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok_service" />
+    </RadioGroup>
+
+    <!-- Round Up Tip Switch -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/roundUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/round_up_tip" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/roundUpSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/calculate"
+        android:textAllCaps="true"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"
+        android:maxWidth="320dp"/> <!-- Set max width -->
+
+    <!-- TextView for Tip Amount Display -->
+    <TextView
+        android:id="@+id/tipResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_amount"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
